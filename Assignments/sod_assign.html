@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!--
+     Write a program that accepts (from the html form) a positive integer less than 1000 and
+prints out the sum of the digits of this number.
+
+Enter a +ve no less than 1000: -4
+Entered number is out of range
+
+Enter a +ve no more than 1000: 1234
+Entered number is out of range
+
+Enter a +ve no less than 1000: 546
+Sum of the digits of 546 is 15
+-->
+<html>
+    <head>
+        <style>
+            body,input,span,button{font-size: xx-large;}
+        </style>
+        <script>
+            function sum_of_digits()
+            {
+                var iNum = document.getElementById("number").value
+                var rem=0,rev=0,res=0;
+                while (iNum!=0)     
+                    {
+                        rem=iNum%10;        // to get last digit of a number
+                        res+=rem;           // add digits of a number
+                        rev=rev*10+rem;     // to shift last digit on next place and add new number in last
+                        iNum/=10;       // to remove last digit from a number
+                    }
+                return Math.round(res);
+            }
+
+            function myFunc()
+            {
+                var number = document.getElementById("number").value
+                if ((number)<0)
+                {
+                    document.getElementById("s1").innerHTML = "Entered number is out of range"
+                }
+                else if ((number)>1000)
+                {
+                    document.getElementById("s1").innerHTML = "Entered number is out of range"
+                }
+                else
+                {
+                    document.getElementById("s1").innerHTML = 
+                        "Sum of digits is " + sum_of_digits()
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Enter a number between 0 to 1000 <br>
+        Number: <input type="number" id="number"> <br><br>
+        <button onclick="myFunc()">Add</button><br><br>
+        <span id="s1"></span>       
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- Assume i have an array of member names. 
+    Read the array and display all member names
+as a string delimited by comma all in uppercase -->
+<html>
+    <head>
+        <style>
+            body{font-size: xx-large;}
+        </style>
+    </head>
+    <body>
+        <script>
+            var names = ["rohit","saurav","digvijay","lala"]
+
+            document.write("Members of my group are: <br>")
+            for(name of names)
+            {
+                document.write(name.toUpperCase() +", ")
+            }
+        </script>
+    </body>
+</html>
