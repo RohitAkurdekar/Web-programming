@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+    Create a HTML page that will display the following form and on clicking the button, the
+details will be listed as shown. Also create an object with all details from form, show them
+in new window thru the newly created object
+-->
+
+<html>
+    <head>
+        <title>special 26</title>
+        <style>body,form,input{font-size: xx-large;}
+            .checkBox{width: 20pt;height:20pt;}
+            input[type="radio"]{width: 20pt;height:20pt;}
+            button{font-size: 30pt;}
+        </style>
+        <script>
+            function saveData()
+            {   // fetch all data
+                var name = document.getElementById("name").value
+                var BirthDate = document.getElementById("BirthDate").value
+                var email = document.getElementById("email").value
+                var luckyNumber = document.getElementById("luckyNumber").value
+
+                var gender = ""
+                var genderObj = document.getElementsByName("gender")
+                for(i of genderObj)
+                {
+                    console.log(i)
+                    if(i.checked == true)
+                    {
+                        gender = "Male"
+                        break
+                    }
+                    else{
+                        gender = "Female"
+                        break
+                    }
+                }
+
+                var food = ""
+                var foodObj = document.getElementsByName("food")
+
+                for(i of foodObj)
+                {
+                    if(i.checked == true)
+                    {
+                        food = food + i.value +", "
+                    }
+                }
+
+                var str = "<br>--------------------------------------------<br>Entered values:"
+                
+                str += "<br>Name        : "+name
+                str += "<br>Birth Date  : "+BirthDate
+                str += "<br>Email       : "+email
+                str += "<br>Gender    : "+gender
+                str += "<br>Lucky No    : "+luckyNumber
+                str += "<br>Fav Food  : "+food
+                
+                document.getElementById("s1").innerHTML = str
+            }
+        </script>
+    </head>
+
+    <body>
+        <!-- Creating a form in table format -->
+        <form name ="form" id="form" >
+            <table>
+            <tr>   <td> Name:      </td> <td> <input type="text" name="name" id="name"> </td></tr>
+            <tr>   <td> Birth Date:</td> <td> <input type="date" name="BirthDate" id="BirthDate"> </td></tr>
+            <tr>   <td> Email:     </td> <td> <input type="email" name="email" id="email"></td></tr>
+            <tr>   <td> Gender:    </td> <td> <input type="radio" name="gender" id="male">Male <br>
+                <input type="radio" name="gender" id="female">Female</td></tr>
+
+            <tr><td>Lucky number</td>
+                <td><input type="number" name="luckyNumber" id="luckyNumber"
+                    min="0" max="100"></td>
+                <span id="spanLucky"></span></tr>
+            <tr><td>  Fav foods: </td><td>
+
+                <input class="checkBox" type="checkbox" name="food" value="PuranPoli">Puran Poli <br>
+                <input class="checkBox" type="checkbox" name="food" value="UkdicheModak">Ukdiche Modak <br>
+                <input class="checkBox" type="checkbox" name="food" value="AluVadi">Alu Vadi <br>
+                <input class="checkBox" type="checkbox" name="food" value="Biryani">Biryani <br>
+                
+            </td></tr>
+                
+            </table>
+            
+        </form>
+        <button onclick="saveData()">Send Data</button>
+        <span id="s1"></span>
+    </body>
+</html>
