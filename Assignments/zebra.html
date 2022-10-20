@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Xebra style to html table -->
+<html>
+    <head>
+        
+        <style>
+            body,table{font-size: xx-large;}
+           /* .even{background-color: black;color: white;}
+            .odd{background-color: white;}
+            */
+        </style> 
+        <script>
+            // function to change color of row
+            function changeColor()
+            {
+                // select all rows with same class name
+                var even = document.getElementsByClassName("even")
+                for(rows of even)   //iterate through all the rows list
+                {
+                    // apply style
+                    rows.style.backgroundColor = "black"
+                    rows.style.color = "white"
+                }
+            }
+        </script>
+    </head>
+    <body onload="changeColor()">
+        <h1>Zebra Table</h1>
+<!-- Creating a table with different class to each row -->
+        <table border="1" id="myTable" class="odd">
+            <!-- header -->
+            <tr><th>SrNo &nbsp;</th><th>Name &nbsp;</th>
+                <th>lalala &nbsp;</th><th>heheheh &nbsp;</th></tr>
+                <tr class="even"><td>1</td><td>Rohit</td><td>kjhdsf</td><td>akjhf</td></tr>
+                <tr class="odd"><td>1</td><td>Rohit</td><td>kjhdsf</td><td>akjhf</td></tr>
+                <tr class="even"><td>1</td><td>Rohit</td><td>kjhdsf</td><td>akjhf</td></tr>
+                <tr class="odd"><td>1</td><td>Rohit</td><td>kjhdsf</td><td>akjhf</td></tr>
+                <tr class="even"><td>1</td><td>Rohit</td><td>kjhdsf</td><td>akjhf</td></tr>
+                <tr class="odd"><td>1</td><td>Rohit</td><td>kjhdsf</td><td>akjhf</td></tr>
+                <tr class="even"><td>1</td><td>Rohit</td><td>kjhdsf</td><td>akjhf</td></tr>
+                <tr class="odd"><td>1</td><td>Rohit</td><td>kjhdsf</td><td>akjhf</td></tr>
+                <tr class="even"><td>1</td><td>Rohit</td><td>kjhdsf</td><td>akjhf</td></tr>
+                
+        </table>
+    </body>
+</html>
