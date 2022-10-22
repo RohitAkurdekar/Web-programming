@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- We have an array that holds many web site names. Eg, www.google.com, www.msn.com,
+www.amazon.co.in, in.answers.yahoo.com, en.m.wikipedia.com, codehs.gitbooks.io,
+www.coderanch.com etc. Search for all sites that begin with “www” and display the total
+number of such sites. Eg for above eg, total is 4 -->
+<html>
+    <head><title>WWW assignment</title>
+    <style>body{font-size: larger;}</style></head>
+    <script>
+
+    </script>
+    
+    <body>
+        <script>
+            webArr=["www.google.com", "www.msn.com","www.amazon.co.in",
+             "in.answers.yahoo.com", "en.m.wikipedia.com", "codehs.gitbooks.io",
+             "www.coderanch.com"]
+
+            document.write(webArr+"<br>--------------------------------<br>")
+            var j=0
+            for(name of webArr)
+            {
+                if(name.match(/www/))
+                {
+                    document.write(name + "<br>")
+                    j++
+                }
+            }
+            document.write("<br>Total number having 'www' are :"+j)
+        </script>
+    </body>
+</html>

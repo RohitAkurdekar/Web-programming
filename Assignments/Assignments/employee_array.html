@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- Accept and store names of 6 employees into array and display in sorted order of names. -->
+
+<html>
+    <head><title>Employee name</title></head>
+    <body>
+        <script>
+            var number = parseInt(prompt("Enter max number of employees"))
+            var i =1
+            emp_name = []           //new Array()
+            while(i<=number)
+            {
+                emp_name[i] = prompt("Enter name of employee")
+                i++
+            }
+            document.write(emp_name+"<br>")
+            document.write(emp_name.sort())
+        </script>
+    </body>
+</html>

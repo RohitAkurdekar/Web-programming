@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- 
+1.    WAP to create a simple initialized int array with 5 integers. Iterate thru the array and find sum
+and average of all elements
+
+2.    WAP to create an new empty array. Read the contents of earlier array and for every element,
+find square of the number and store into new array. Use appropriate array methods
+
+3.    Even and odd numbers of array 
+-->
+<html>
+    <head><title>Integer assignment</title>
+    <style>body{font-size: larger;}</style>
+
+    <script>
+        // Function that return array of even numbers from received array
+        function even(arr)
+        {
+            tempArr=[]
+            for(i of arr)
+            {
+                if(i%2==0)
+                {
+                    tempArr.push(i)
+                }
+            }
+            return tempArr.sort()
+        }
+
+
+        // Function that return array of odd numbers from received array
+        function odd(arr)
+        {
+            tempArr=[]
+            for(i of arr)
+            {
+                if(i%2!=0)
+                {
+                    tempArr.push(i)
+                }
+            }
+            return tempArr.sort()
+        }
+    </script>
+
+</head>
+    <body>
+        <script>
+            // 1. Ans
+            intArr=[]
+            // 2. Ans
+            sqrArr=[]
+            var sum=0
+            var max_int = parseInt(prompt("Enter maximum number of int"))
+            for(i=0;i<max_int;i++)
+            {
+            // 1. Ans
+                intArr[i] = parseInt(prompt("Enter a number: "))
+                sum+=intArr[i]
+            // 2. Ans
+                sqrArr[i] = intArr[i]*intArr[i]
+            }
+            // 1. Ans
+            document.write("Arr: "+intArr+"<br>")
+            document.write("Sum: "+sum+"<br>")
+            document.write("Avg: "+(sum/max_int)+"<br>")
+            // 2. Ans
+            document.write("Square array: "+(sqrArr)+"<br>")
+
+            // 3.Even
+            evenArr = even(intArr)
+            document.write("Even numbers: "+evenArr+"<br>")
+            // 3.Odd
+            oddArr = odd(intArr)
+            document.write("Odd numbers: "+oddArr+"<br>")
+
+        </script>
+    </body>
+</html>

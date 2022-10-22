@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Date assignment</title>
+        <style>
+            body{font-size: xx-large;}
+        </style>
+    </head>
+
+    <body>
+       <script>
+        var today = new Date()  // Current date and time gets automatically stored in var today
+        arr = new Array()       // Array to store different parts of messgae
+        arr[0] = "Today is"     
+        
+        // console.log(today)   //Date Mon Oct 17 2022 11:45:38
+
+        todayArr = today.toString().split(" ")  // spilt day date time format 
+        //Mon
+        arr[1] = todayArr[0] + "day,"           // position of day in array    
+        //17
+        arr[2] = todayArr[2]                    // position of date in array
+        // Oct
+        arr[3] = todayArr[1]                    // position of month in array
+        // 2022
+        arr[4] = todayArr[3] + ","              // position of year in array
+
+        arr[5] = "Welcome and"
+
+        // Greet user according to time span
+        if(today.getHours()<12 && today.getHours()>=6)
+            arr[6] = "Good Morning to you."
+        else if(today.getHours()>=12 && today.getHours()<17)
+            arr[6] = "Good Afternoon to you."
+        else if(today.getHours()>=17 && today.getHours()<21)
+            arr[6] = "Good Evening to you."
+        else if(today.getHours()>=21 && today.getHours()<6)
+            arr[6] = "Good Night to you."
+        
+        document.write(arr.join(" "))          // join all message parts using ' '
+       </script> 
+    </body>
+</html>

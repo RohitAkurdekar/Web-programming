@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- Assignment 1 to 7 except form 
+form has been completed in oct 14 assignment -->
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        
+        <script>
+            $(document).ready(()=>{
+                $("button").click(()=>{
+                    // 1 to 7 except FORM
+                    $("div h1").css("background-color","grey");
+                    $("body").css({
+                        "background-color":"lightblue",
+                        "font-size":"15pt"});
+                    $("div").css("background-color","green");
+                    $("#target span").html("I was added");
+                    $("#target span").css({"color":"white",
+                        "border":"1px solid yellow"});
+                    $("div:eq(1)").css("background-color","yellow");
+
+                    $("#sel1").html($("#sel option:eq(1)").html())
+
+
+                    $("ul").css({"border":"3px dotted green","background-color":"yellow"})
+
+                            // 8th
+                    $("body").append("<div><h1>JQuery Core</h1></div>")
+
+                    $("#listSpan").text("second item in list is "+String(($("ul ol:nth-child(2)").html())))
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <button>Click me</button>
+
+        <h1>abc</h1>
+        <div id=”div1”>
+            <h1>head-1</h1>
+            <h1>head-2</h1>
+        </div>
+
+        <div>
+            I am 2nd div 
+        </div>
+        <br>
+        <div id="target">
+            <span></span>
+        </div>
+        <h1>xyz</h1>
+
+        <select name="sel" id="sel">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select> 
+        <span id="sel1"></span>
+
+
+        <ul>
+            <ol>
+                Jabba dabba jabba
+            </ol>
+            <ol>
+                Abba dabba jabba
+            </ol>
+            <ol>
+                Jabba 
+            </ol>
+        </ul>
+        <br> <span id="listSpan"></span>
+
+    </body>
+</html>

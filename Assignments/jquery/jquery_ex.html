@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<!-- gt,lt,first -->
+<html>
+    <!-- CDN: Content Delivery Network -->
+    <head>
+        <!-- Import jquery library file -->
+
+        <!-- local file saved on desktop -->
+        <!-- <script src="jquery-3.6.1.js"></script> -->
+
+        <!-- link to jquery file from web on jquery server -->
+        <!-- <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script> -->
+
+        <!-- link to jquery file from web on google server -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <script>
+            // When html file is completely loaded run function
+            $(document).ready(()=>{
+               $("button").click(()=>{
+                // select all para and apply 'blue' color
+                    $("p").css("color","blue")
+
+                // select element by id and apply font size to '20pt'
+                    $("#p1").css("font-size","20pt")
+
+                // Select all paras in div and apply 'red' color
+                    $("div p").css({"color":"red","font-size":"25pt"})
+
+                // hide all h2 tags completely after 5000 ms       ** FadeOut effect
+                    $("h2").hide(5000)
+
+                // select all h1 and append text 'ROHIT AKURDEKAR'
+                    $("h1").append("<small> ROHIT AKURDEKAR </small>")
+
+                // select tag by id 'p1' and fadeout completely in 5000ms
+                    $("#p1").fadeOut(5000)
+
+                // select tag withid 'p4' and fade to 0.3 i.e 30%
+                    $("#p4").fadeTo(5000,0.3)
+
+                // select all paras and iterate 
+                    $("p").each(function(){
+                        // display innerHTML of tag to console
+                        console.log($(this).html())
+
+                        // change innerHTML to string
+                        $(this).html("New content")
+                    })
+                // select particular para
+                $("p:eq(5)").html("Particular selection")
+               })
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Welcome to jquery</h1>
+        <p id="p1">Para-1</p>
+        <p class="c1">Para-2</p>
+        <p id="p3">Para-3</p>
+        <p id="p4">Para-4</p>
+        <div>
+            <p>Para-5</p>
+            <p>Para-6</p>
+        </div>
+        <h2 class="c1">Head 2</h2>
+        
+        <button style="font-size: 15pt;">Click me</button>
+    </body>
+</html>

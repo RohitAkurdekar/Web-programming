@@ -1,0 +1,39 @@
+<!-- Login page -->
+<html>
+    <head><title>Appointment schedular</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(()=>{
+                $("#hide").click(()=>{
+                    $(":input").hide();
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <form>
+            <h1><u>Appointment schedular</u></h1>
+            <fieldset>
+                <legend>Personal information</legend>
+            <br>    Name <br> <input type="text" name="Name">
+            <br>    Telephone number <br> <input type="tel" name="tel">
+            <br>    Email address <br> <input type="email" name="email">
+            <br>    Date of birth <br> <input type="date" name="DoB" >
+            </fieldset>
+            <fieldset>
+                <legend>Appointment required</legend>
+            <br>    What is the reason for your reason for visit? 
+            <br>    <input type="text" name="reason" placeholder="Enter your reason">
+            <br>    Current pain level <br> <input type="range" name="painLevel">
+            <br>    Preferred date: <br> <input type="date" name="prefDate">
+            <br>    Preferred time: <br> <input type="time" name="prefTime">
+
+            </fieldset>
+            <br><br>
+            <input type="submit" value="Submit" style="font-size: 15pt;">
+        </form>
+        <button id="hide">HIDE</button>
+        <footer>&copy; 2022 Rohit Akurdekar</footer>
+    </body>
+</html>

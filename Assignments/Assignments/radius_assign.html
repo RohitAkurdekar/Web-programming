@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- Create a HTML form that accepts radius and displays the area and circumference of a
+circle. Make use of Math object -->
+
+<html>
+    <head>
+        <style>
+            body,input,span{ font-size: xx-large;}
+        </style>
+        <script>
+            
+            function calcArea()
+            {
+                var radius = (document.getElementById("radius").value)
+                document.getElementById("Area").innerHTML = Math.round(Math.PI*radius*radius)
+                document.getElementById("circumference").innerHTML = Math.round(2*Math.PI*radius)
+            }
+        </script>
+    </head>
+    <body>
+        radius: <input type="number" name="radius" id="radius" min="0"> <br> <br>
+        <input type="button" value="display" onclick="calcArea()"> <br> <br>
+        Area: <span id="Area"></span>  <br> <br>
+        circumference: <span id="circumference"></span>  <br> <br>
+    </body>
+</html>
